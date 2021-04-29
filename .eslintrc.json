@@ -1,0 +1,51 @@
+{
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "jest",
+    "import"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-var-requires": 0,
+    "quotes": [2, "single", "avoid-escape"],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-console": "error",
+    "semi": "off",
+    "max-classes-per-file": [
+      "error",
+      1
+    ],
+    "@typescript-eslint/no-parameter-properties": 0,
+    "import/no-default-export": 2,
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false,
+          "object": false
+        }
+      }
+    ]
+  }
+}
