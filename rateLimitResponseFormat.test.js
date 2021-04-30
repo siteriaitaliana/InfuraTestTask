@@ -32,7 +32,7 @@ export default function() {
         // console.log(JSON.stringify(JSON.parse(res.body).error.data))
         check(res, { 'allowed_rps check': (r) => JSON.parse(res.body).error.data.rate.allowed_rps >= 1 });
         check(res, { 'backoff_seconds check': (r) =>  
-            JSON.parse(res.body).error.data.rate.backoff_seconds >= 0 &&  JSON.parse(res.body).error.data.rate.backoff_seconds < 60 
+            JSON.parse(res.body).error.data.rate.backoff_seconds >= 0
         });
         check(res, { 'current_rps check': (r) =>  JSON.parse(res.body).error.data.rate.current_rps > 1 });    
     }
