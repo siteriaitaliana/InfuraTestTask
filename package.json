@@ -6,8 +6,9 @@
   "scripts": {
     "lint": "eslint . --ext ts --max-warnings 0",
     "lint:fix": "eslint .  --ext ts --fix --max-warnings 0",
-    "test": "USERNAME= PASSWORD= ts-node main.ts",
-    "test:debug": "USERNAME= PASSWORD= PWDEBUG=1 ts-node main.ts"
+    "test1": "USERNAME= PASSWORD= ts-node requestCountDashboards.test.ts",
+    "test1:debug": "USERNAME= PASSWORD= PWDEBUG=1 ts-node main.ts",
+    "test2": "k6 run rateLimitResponseFormat.test.js"
   },
   "author": "",
   "license": "ISC",
